@@ -36,15 +36,7 @@ client.on("ready", async () => {
         let serverIn = numberWithCommas(client.guilds.cache.size);
         let totalMembers = numberWithCommas(client.guilds.cache.reduce((a,b) => a + b.memberCount, 0));
 
-        client.user?.setPresence({
-            status: "idle", // You can also use online, invisible and dnd.
-            activities: [
-                {
-                    name: `${client.config.prefix}help || ${totalMembers} users in ${serverIn} servers`,
-                    type: "LISTENING" // You can also use PLAYING, STREAMING, WATCHING and COMPETING.
-                }
-            ]
-        })
+    
 });
 
 // Message Event + Command Handler Don't Touch this.
